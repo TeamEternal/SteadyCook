@@ -7,8 +7,6 @@ SteadyCook is a browser *automation tool* that actively uses [Selenium](https://
 
 ---
 
-
-
 ### Installation:
 > Additional setup and configuration for SteadyCook may be needed to run in a proper environment
 
@@ -33,22 +31,22 @@ To setup and install SteadyCook properly initiate the following:
 2. Setup a new virtual environment via virtualenv with access to global python system-site packages:
    * `virtualenv Project_SteadyCook --python=python3.6 --system-site-packages`
 
-3. Change your current directory to the virtual environment 'Project_SteadyCook':
+3. Change your current directory to the virtual environment '*Project_SteadyCook*':
    * `cd Project_SteadyCook/ ; source bin/activate`
 
 4. Clone SteadyCook and move all local files to your virtual environment
    * `git clone https://github.com/TeamEternal/SteadyCook.git`
    * `cd SteadyCook/ ; mv * ..` then execute `cd .. ; sudo rm -r SteadyCook/`
    
-5. Install the pip package *pynput* and create a 'driver_path.txt' file in the driver_src/ directory
+5. Install the pip package *pynput* and create a '*driver_path.txt*' file in the driver_src/ directory
    * `pip3 install pynput ; touch driver_src/driver_path.txt`
 
-6. Start main installation of SteadyCook that will generate 'settings.ini' and store the DEFAULT_CHROME_PATH
+6. Start main installation of SteadyCook that will generate '*settings.ini*' and store the DEFAULT_CHROME_PATH
    * `python3 setup.py`
 
 The last command will generate the following files:
    * *'exec.sh'* - Needed to launch and pass custom data to Google Chrome's remote debugging browser
-   * *'settings.ini'* - Your configuration initialization file: Used to set custom paramaters to control SteadyCook
+   * *'settings.ini'* - Your configuration initialization file: Used to set custom parameters to control SteadyCook
 
 ### Customization & More:
 
@@ -65,7 +63,7 @@ With SteadyCook you can do the following:
 Change your current directory to the virtual environment you created earlier (Project_SteadyCook) and execute:
    * `touch clientauth.txt`
    * Store your Username and Password for [https://stressthem.to](https://stressthem.to) in the following order: $USERNAME:$PASSWORD
-   * Edit the '*automate_stressthem_login*' option (which defaults to no) inside of 'settings.ini' to 'yes' and re-launch SteadyCook via `python3 steadycook.py`
+   * Edit the '*automate_stressthem_login*' option (which defaults to no) inside of '*settings.ini*' to '*yes*' and re-launch SteadyCook via `python3 steadycook.py`
 
 ### Usage:
 
@@ -81,15 +79,19 @@ After a successfull installation, you can now use SteadyCook as follows:
 
 **How do I exit from my currently activated virtual environment?**
 
-- To fully close your currently activated virtual environment you need to execute: `deactivate` via the command-line
+- To fully close your currently activated virtual environment you need to execute: `deactivate` via the command-line.
 
 ### Currently supported arguments
 
-1. `-t` - Specifies a remote target in the form of an IPv4 address to launch a DNS based attack on
-2. `-p` - Specifies the target port that will be used when the remote attack is started
-3. `-d` - The duration the attack will last until execution is stopped (MAX=8hrs)
-4. `-x` - The type of attack to initiate against the remote target (SUPPORTED=DNS)
+Command | Description
+--- | -- |
+`-t` | Specifies a remote target in the form of an IPv4 address to launch a DNS based attack on
+`-p` | Specifies the target port that will be used when the remote attack is started
+`-d` | The duration the attack will last until execution is stopped (MAX=8hrs)
+`-x` | The type of attack to initiate against the remote target (SUPPORTED=DNS)
 
-WARNING: The time based data that SteadyCook uses to print TIME_PASSED and TIME_LEFT is still actively being developed. You might see numbers in the form of minutes left without the amount of hours left or hours passed. SteadyCook will still FULLY execute the attack for the duration that YOU SET in hours (via `-d`) This change will come in a later version, as the core features of SteadyCook are guaranteed to fully work, once you have setup a proper environment
+WARNING: The time based data that SteadyCook uses to print TIME_PASSED and TIME_LEFT is still actively being developed. You might see numbers in the form of minutes left without the amount of hours left or hours passed. SteadyCook will still FULLY execute the attack for the duration that YOU SET in hours (via `-d`) This change will come in a later version, as the core features of SteadyCook are guaranteed to fully work, once you have setup a proper environment.
    
+---
 
+<center>TeamEternal - OSFTP (Open Source Free To Public) 2020</center>

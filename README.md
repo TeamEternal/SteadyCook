@@ -7,7 +7,14 @@ SteadyCook is a browser *automation tool* that actively uses [Selenium](https://
 
 ---
 
+
+
 ### Installation:
 > #### Additional setup and configuration for SteadyCook may be needed to run in a proper environment
 
-#### SteadyCook was created in a Python3 virtual environment, and it should be cloned and used in one
+#### SteadyCook was created in a Python3 virtual environment, and it should be cloned and used in one!
+
+To setup and install SteadyCook properly initiate the following:
+
+1. Install 'virtualenv' from your local pip3 package directory:
+   Python: `pip3 install virtualenv` | Linux: `sudo apt-get install virtualenv` | MacOS: `brew install virtualenv`

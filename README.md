@@ -48,7 +48,7 @@ To setup and install SteadyCook properly initiate the following:
    Once you have downloaded the correct chrome driver for your version of Google Chrome, make sure it is located in your driver_src/  folder in the current virtual environment. Next unzip the file:
 
    To unzip simply execute the following:
-   * `cd driver_src/ ; unzip <chromedriver file you downloaded> -d ..`
+   * `cd driver_src/ ; unzip <chromedriver file you downloaded> -d .. ; cd ..`
 
    You can now move onto the next step.
 

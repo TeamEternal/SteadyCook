@@ -23,6 +23,8 @@ Once you are finished execute: `source <YOUR_RC_FILE>`
 
 If you can execute: `Google\ Chrome` without any errors, continue to step #1.
 
+---
+
 To setup and install SteadyCook properly initiate the following:
 
 1. Install *[virtualenv](https://pypi.org/project/virtualenv/)* from your local pip3 package directory:

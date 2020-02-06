@@ -19,7 +19,7 @@ Where '*YOUR_PATH_TO_GOOGLE_CHROME*' is the absolute path to your Google Chrome 
 
 Once you are finished execute: `source <YOUR_RC_FILE>`
 
-If you can execute: `Google\ Chrome` without any errors, continue to step #1.
+If you can execute: `Google\ Chrome` without any errors, continue to step #1 
 
 ---
 
@@ -41,7 +41,18 @@ To setup and install SteadyCook properly initiate the following:
 5. Install the pip package *pynput* and create a '*driver_path.txt*' file in the driver_src/ directory
    * `pip3 install pynput ; touch driver_src/driver_path.txt`
 
-6. Start main installation of SteadyCook that will generate '*settings.ini*' and store the DEFAULT_CHROME_PATH
+6. Download the correct Chrome Drivers for your Google Chrome browser version (continue until step #7)
+
+NOTE: If you do not have the proper Google Chrome driver downloaded you can get it from: [Download Chrome Driver's](https://chromedriver.chromium.org/downloads)
+
+Once you have downloaded the correct chrome driver for your version of Google Chrome, make sure it is located in driver_src/ in your current virtual environment. Next unzip the file:
+
+To unzip simply execute the following:
+   * `cd driver_src/ ; unzip <chromedriver file you downloaded> -d ..`
+
+You can now move onto the next step.
+
+7. Start main installation of SteadyCook that will generate '*settings.ini*' and store the DEFAULT_CHROME_PATH
    * `python3 setup.py`
 
 The last command will generate the following files:

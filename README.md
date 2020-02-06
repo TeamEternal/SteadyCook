@@ -43,14 +43,15 @@ To setup and install SteadyCook properly initiate the following:
 
 6. Download the correct Chrome Drivers for your Google Chrome browser version (continue until step #7)
 
-NOTE: If you do not have the proper Google Chrome driver downloaded you can get it from: [Download Chrome Driver's](https://chromedriver.chromium.org/downloads)
+   NOTE: If you do not have the proper Google Chrome driver downloaded you can get it from: [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
 
-Once you have downloaded the correct chrome driver for your version of Google Chrome, make sure it is located in driver_src/ in your current virtual environment. Next unzip the file:
+   Once you have downloaded the correct chrome driver for your version of Google Chrome, make sure it is located in your driver_src/     
+   folder in the current virtual environment. Next unzip the file:
 
-To unzip simply execute the following:
+   To unzip simply execute the following:
    * `cd driver_src/ ; unzip <chromedriver file you downloaded> -d ..`
 
-You can now move onto the next step.
+   You can now move onto the next step.
 
 7. Start main installation of SteadyCook that will generate '*settings.ini*' and store the DEFAULT_CHROME_PATH
    * `python3 setup.py`

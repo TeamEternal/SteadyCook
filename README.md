@@ -14,10 +14,11 @@ SteadyCook is a browser *automation tool* that actively uses [Selenium](https://
 
 #### SteadyCook was created in a Python3 virtual environment, and it should be cloned and used in one!
 
-NOTE: In order for SteadyCook to work you need to install Google Chrome and edit your '.bashrc' or '.zshrc' to add Google Chrome to your systems global path. You can do this by the following:
+NOTE: In order for SteadyCook to work you need to install Google Chrome and edit your '*.bashrc*' or '*.zshrc*' file to add Google Chrome to your systems global path. You can do this by the following:
    * `export PATH=$YOUR_PATH_TO_GOOGLE_CHROME:$PATH`
    
 Where '*YOUR_PATH_TO_GOOGLE_CHROME*' is the absolute path to your Google Chrome installation
+
 Once you are finished execute: `source <YOUR_RC_FILE>`
 
 If you can execute: `Google\ Chrome` without any errors, continue to step #1.
@@ -70,10 +71,23 @@ Change your current directory to the virtual environment you created earlier (Pr
 
 After a successfull installation, you can now use SteadyCook as follows:
    * `./exec.sh`
-   * In a separate window: `python3 steadycook.py -t <target> -p <int: default 80> -d <int: max 8> -x dns`
+   * In a separate window execute: `python3 steadycook.py -t <target> -p <int: default 80> -d <int: max 8> -x dns`
 
 **Why do I need to run `./exec.sh` before I can use SteadyCook?**
 
-- The file `exec.sh` contains a command that SteadyCook heavily relies on, without Google Chrome's remote debugging browswer SteadyCook will not function at all. If you try to initiate SteadyCook without launching Google's remote debugging browser, the script will buffer as it tries to connect to the local Google Chrome server.
+- The file `exec.sh` contains a command that SteadyCook heavily relies on, without Google Chrome's remote debugging browswer SteadyCook will not function at all. If you try to initiate SteadyCook without launching Google's remote debugging browser, the script will buffer as it tries to connect to the local Google Chrome server and will not be able to establish a connection.
+
+**How do I exit from my currently activated virtual environment?**
+
+- To fully close your currently activated virtual environment you need to execute: `deactivate` via the command-line
+
+### Currently supported arguments
+
+1. `-t` - Specifies a remote target in the form of an IPv4 address to launch a DNS based attack on
+2. `-p` - Specifies the target port that will be used when the remote attack is started
+3. `-d` - The duration the attack will last until execution is stopped (MAX=8hrs)
+4. `-x` - The type of attack to initiate against the remote target (SUPPORTED=DNS)
+
+WARNING: The time based data that SteadyCook uses to print TIME_PASSED and TIME_LEFT is still actively being developed. You might see numbers in the form of minutes left without the amount of hours left or hours passed. SteadyCook will still FULLY execute the attack for the duration that YOU SET in hours (via `-d`) This change will come in a later version, as the core features of SteadyCook are guaranteed to fully work, once you have setup a proper environment
    
 

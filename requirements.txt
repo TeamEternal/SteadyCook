@@ -1,0 +1,7 @@
+PyAutoGUI==0.9.48
+pycodestyle==2.5.0
+PyGetWindow==0.0.8
+PyMsgBox==1.0.7
+pyobjc==6.1
+pyobjc-core==6.1
+selenium==3.141.0

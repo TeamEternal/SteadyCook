@@ -1,0 +1,39 @@
+1. user runs 'setup.py'
+ - setup.py will get user options then pass them to config.py which will generate a 'setting.ini' configuration file to use
+ - for some reason python wont recognize existing chrome paths as paths located on the file system
+    to get around this we need to create a local environment variable within our virtual environment
+    user types : export CUSTOM_CHROME_PATH=YOUR_CHROME_PATH then manually sets --user-data-dir=$CUSTOM_CHROME_PATH in exec.sh
+
+if the client decides to use the automatic login functionality of steadycook then they should know that captcha decides to be 
+a pain in the ass, you click 'fire hydrant' and it literally says try again..also side note:
+if you get an error about automated queries or suspicious network traffic, switch the '--user-data-dir' inside of 'exec.sh'
+to something in the same path like /path/driver_src/chrome_path1 or /path/driver_src/chrome_path2
+
+not calling '#!/bin/bash' because of the limitations of the python virtual environment
+
+setup.py will automatically load config.py and generate settings.ini
+
+might have to define the method for generating 'settings.ini' as a separate instance, due to the static generation from
+loading the whole file into cook_handler.py redirecting browser to http://0.0.36.6/ after 'exec.sh' is called
+
+get this the old target command for (awk -F "=" '/target_port/ {print $2}' settings.ini) generated leading whitespace
+which caused the chrome debugging port to not evaluate to anything (defined as a problem earlier, solution below)
+
+(awk -F "=" '/target_port/ {print $2}' settings.ini | sed -e 's/^[[:space:]]*//') => removes all of the leading whitespace
+which in-turn allows the users to actually specify their own target ports within 'settings.ini'
+would have been waaay easier with python, but we could just do it in bash like we already did, execution is faster because of it
+
+need to allow users to set custom ports, in the instance of steadycook being passed through a user controlled proxyserver 
+
+remove update_driver_path() due to user manually needing to create an environment variable and rewriting 'exec.sh'
+
+
+2. user runs 'steadycook'
+ - steadycook will contain a custom database in a later version, where users can store information about remote targets
+   including location, type, open-ports, possible exploits etc
+
+
+
+## info about cook_handler.py
+ - cook_handler.py now gets user data sourced in 'settings.ini' and imports them into the main execution file
+ - users can now setup custom ports, addresses, etc

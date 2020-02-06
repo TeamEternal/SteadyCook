@@ -27,7 +27,7 @@ If you can execute: `Google\ Chrome` without any errors, continue to step #1.
 
 To setup and install SteadyCook properly initiate the following:
 
-1. Install *[virtualenv](https://pypi.org/project/virtualenv/)* from your local pip3 package directory:
+1. Install *[virtualenv](https://pypi.org/project/virtualenv/)*:
    * Python: `pip3 install virtualenv` | Linux: `sudo apt-get install virtualenv` | MacOS: `brew install virtualenv`
    
 2. Setup a new virtual environment via virtualenv with access to global python system-site packages:
